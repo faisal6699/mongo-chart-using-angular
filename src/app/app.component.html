@@ -1,4 +1,16 @@
 <div class="mongo">
   <h2 class="header">Mongo chart dashboard</h2>
-  <div id="dashboard"></div>
+  <select (change)="changeType($event)">
+    <option value="none">Choose One</option>
+    <option value="dashboard">Show Dashboard</option>
+    <option value="chart">Show single chart</option>
+  </select>
+
+  <app-dashboard *ngIf="showChartType === 'dashboard'"></app-dashboard>
+  <app-single-chart *ngIf="showChartType === 'chart'"></app-single-chart>
+
+  <h2 *ngIf="showChartType === 'none'"
+      class="no-item">
+    No Item selected
+  </h2>
 </div>

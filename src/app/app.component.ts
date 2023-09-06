@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mongo-chart-using-angular';
+
+  showChartType: string | undefined = 'none';
+
+  changeType($event: any) {
+    this.showChartType = $event.target.value
+  }
 }
