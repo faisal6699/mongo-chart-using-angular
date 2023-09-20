@@ -9,9 +9,12 @@ export class ChartService {
 
   constructor() { }
 
-  createChartDashboard(baseUrl: string, dashboardId: string) {
+  createChartDashboard(baseUrl: string, dashboardId: string, token: string) {
     const sdk = new ChartsEmbedSDK({
       baseUrl: baseUrl,
+      getUserToken: () => {
+        return token
+      }
     });
 
     // embed a dashboard

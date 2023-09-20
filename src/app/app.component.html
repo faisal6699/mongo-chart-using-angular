@@ -1,4 +1,11 @@
 <div class="mongo">
+  <div *ngIf="show">
+    <asl-google-signin-button>
+    </asl-google-signin-button>
+  </div>
+
+  <button (click)="show = true">abc</button>
+
   <h2 class="header">Mongo chart dashboard</h2>
   <select (change)="changeType($event)">
     <option value="none">Choose One</option>
