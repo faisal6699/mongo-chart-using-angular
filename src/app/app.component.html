@@ -1,10 +1,7 @@
 <div class="mongo">
-  <div *ngIf="show">
-    <asl-google-signin-button>
-    </asl-google-signin-button>
+  <div style="display: block; text-align: center">
+    <asl-google-signin-button style="display: inline-block;text-align: center;margin: auto; padding-top: 15px"/>
   </div>
-
-  <button (click)="show = true">abc</button>
 
   <h2 class="header">Mongo chart dashboard</h2>
   <select (change)="changeType($event)">
